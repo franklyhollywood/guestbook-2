@@ -1,3 +1,12 @@
-export default function App() {
-  return <h1>Hello World</h1>;
+import Home from './views/Home/Home';
+import Layout from './views/Layout/Layout';
+
+function App() {
+  return (
+    <Layout>
+      <Home />
+    </Layout>
+  );
 }
+
+export default App;
