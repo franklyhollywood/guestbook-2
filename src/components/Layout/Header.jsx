@@ -1,7 +1,7 @@
-import { useUser } from '../../context/UserContext';
+import { useAuth } from '../../hooks/useAuth.js';
 
 const Header = () => {
-  const { user } = useUser();
+  const { user } = useAuth();
 
   return (
     <header>

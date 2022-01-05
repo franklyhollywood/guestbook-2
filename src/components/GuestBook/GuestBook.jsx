@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import { useEntries } from '../../context/EntryContext';
-import { useUser } from '../../context/UserContext';
+import { useEntries } from '../../context/entryContext.jsx';
+// import { useUser } from '../../context/userContext';
+import { useAuth } from '../../hooks/useAuth.js';
 
 export default function GuestBook() {
   const [name, setName] = useState('');
   const [guestEntry, setGuestEntry] = useState('');
-
   const { entries, setEntries } = useEntries();
-  const { user, setUser } = useUser();
+  const { user, setUser, logout } = useAuth();
 
   function updateGuestName() {
     if (!guestEntry) return;
-    setUser(name);
-    setEntries([...entries, { name, message: guestEntry }]);
+    // setUser(name);
+    setEntries([...entries, { name: user, message: guestEntry }]);
     setGuestEntry('');
   }
 
@@ -65,13 +65,7 @@ export default function GuestBook() {
             Sign
           </button>
           {user && (
-            <button
-              type="button"
-              onClick={() => {
-                setUser('');
-                setName('');
-              }}
-            >
+            <button type="button" onClick={logout}>
               Not {user}
             </button>
           )}

@@ -1,16 +1,15 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { UserProvider } from './context/UserContext';
-import { EntryProvider } from './context/EntryContext';
+import { EntryProvider } from './context/entryContext';
+import { ProvideAuth } from './context/ProvideAuth.jsx';
 
 ReactDOM.render(
   <React.StrictMode>
-    <EntryProvider>
-      <UserProvider>
+    <ProvideAuth>
+      <EntryProvider>
         <App />
-      </UserProvider>
-    </EntryProvider>
+      </EntryProvider>
+    </ProvideAuth>
   </React.StrictMode>,
   document.getElementById('root')
 );
