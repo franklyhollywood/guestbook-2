@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { ProvideAuth } from '../../context/ProvideAuth.jsx';
 import Layout from '../Layout/Layout';
 import Auth from './Auth.jsx';
-import { UserProvider } from '../../context/UserContext';
+import { UserProvider } from '../../context/userContext';
 
 it('renders the Auth view', () => {
   const { container } = render(

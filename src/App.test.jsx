@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App';
-import { UserProvider } from './context/UserContext';
-import { EntryProvider } from './context/EntryContext';
+import { UserProvider } from './context/userContext';
+import { EntryProvider } from './context/entryContext';
 import { render } from '@testing-library/react';
 
 it('should render index.jsx', () => {
