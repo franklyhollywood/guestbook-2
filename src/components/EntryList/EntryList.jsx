@@ -1,6 +1,6 @@
 import React from 'react';
-import { useEntries } from '../context/entryContext.jsx';
-import Entry from '../context/Entry.jsx';
+import { useEntries } from '../../context/entryContext.jsx';
+import Entry from '../Entry/Entry.jsx';
 
 export default function EntryList() {
   const { entries } = useEntries();

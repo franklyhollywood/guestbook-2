@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useEntries } from '../context/entryContext.jsx';
+import { useEntries } from '../../context/entryContext.jsx';
 // import { useUser } from '../../context/userContext';
 import { useAuth } from '../../hooks/useAuth.js';
 
