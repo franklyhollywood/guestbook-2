@@ -2,7 +2,7 @@ import React from 'react';
 import App from './App';
 import { UserProvider } from './context/UserContext';
 import { EntryProvider } from './context/EntryContext';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 it('should render index.jsx', () => {
   const { container } = render(
@@ -14,7 +14,7 @@ it('should render index.jsx', () => {
       </EntryProvider>
     </React.StrictMode>
   );
-  const sign = screen.getByText('Sign');
-  expect(sign).toBeInTheDocument();
-  // expect(container).toMatchSnapshot();
+  // const sign = screen.getByText('Sign');
+  // expect(sign).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
 });
