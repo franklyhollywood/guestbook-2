@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import App from './App';
-import { EntryProvider } from './context/entryContext';
+import { EntryProvider } from './context/entriesContext';
 import { ProvideAuth } from './context/ProvideAuth.jsx';
 
 ReactDOM.render(
