@@ -1,4 +1,4 @@
-import { useUser } from '../../context/userContext';
+import { useUser } from '../../context/userContext.jsx';
 
 const Header = () => {
   const { user } = useUser();

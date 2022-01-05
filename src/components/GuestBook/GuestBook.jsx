@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useEntries } from '../../context/entryContext';
-import { useUser } from '../../context/userContext';
+import { useEntries } from '../context/entryContext.jsx';
+// import { useUser } from '../../context/userContext';
 import { useAuth } from '../../hooks/useAuth.js';
 
 export default function GuestBook() {
